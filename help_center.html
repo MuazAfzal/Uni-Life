@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNI LIFE - User Guide & License Agreement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+            padding: 20px;
+            background-color: #333;
+            flex-grow: 1;
+            justify-content: flex-start;
+        }
+
+        h1, h3 {
+            text-align: center;
+            color: #ff9800;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #ff9800;
+        }
+
+        p, ul {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 18px;
+        }
+
+        .license-agreement {
+            background-color: #444;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .license-agreement pre {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: "Courier New", monospace;
+            color: #fff;
+            white-space: pre-wrap;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #e68900;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .tab {
+            padding: 10px;
+            background-color: #444;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            width: 50%;
+            text-align: center;
+        }
+
+        .tab:hover {
+            background-color: #555;
+        }
+
+        .active-tab {
+            background-color: #ff9800;
+        }
+
+        /* Feedback Section */
+        #feedback-form-container {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        #feedback-form-container h3 {
+            text-align: center;
+            color: #ff9800;
+        }
+
+        label {
+            margin-top: 10px;
+            display: block;
+            font-size: 14px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            background-color: #444;
+            border: 1px solid #555;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .success-message {
+            color: green;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        /* After Agreement */
+        .thank-you-message {
+            display: none;
+            font-size: 18px;
+            color: #ff9800;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #guide-tab-content {
+            flex-grow: 1;
+            overflow-y: auto;
+            display: block;
+        }
+
+        /* Full width message */
+        #container.agreed {
+            padding: 40px;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #container.agreed .tabs {
+            display: none;
+        }
+
+        #container.agreed button {
+            display: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        .social-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: #ff9800;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #e68900;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <h1>Welcome to UNI LIFE</h1>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active-tab" id="guide-tab" onclick="showTab('guide')">User Guide & License</div>
+        <div class="tab" id="feedback-tab" onclick="showTab('feedback')">User Feedback</div>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="guide-tab-content" style="flex-grow: 1; overflow-y: auto;">
+        <h3>User Guide & License Agreement</h3>
+
+        <!-- User Guide Section -->
+        <div class="section">
+            <h2>User Guide</h2>
+            <p>Welcome to UNI LIFE – Empowering Your University Journey! Here’s a quick guide on how to use the platform effectively:</p>
+
+            <!-- Campus Map Section -->
+            <div class="section">
+                <h3>1. Campus Map</h3>
+                <p>This feature provides a user-friendly, interactive map of the university campus. It helps new students easily locate class buildings, libraries, cafeterias, and other essential facilities.</p>
+                <p><strong>How to Use:</strong></p>
+                <ul>
+                    <li>Click on the "Campus Map" tab from the homepage.</li>
+                    <li>Zoom in on different campus areas like classrooms, libraries, and cafeterias.</li>
+                    <li>Click on any building for additional information (location, working hours, etc.).</li>
+                </ul>
+            </div>
+
+            <!-- Budget Shopping and Halal Food Finder Section -->
+            <div class="section">
+                <h3>2. Budget Shopping & Halal Food Finder</h3>
+                <p>Find nearby stores offering budget-friendly essentials and halal food options for an inclusive experience.</p>
+                <p><strong>How to Use:</strong></p>
+                <ul>
+                    <li>Enter your location or use your current location to find nearby stores.</li>
+                    <li>The app will filter stores by budget-friendly options and halal food availability.</li>
+                </ul>
+            </div>
+
+            <!-- Student Finance Tracker Section -->
+            <div class="section">
+                <h3>3. Student Finance Tracker</h3>
+                <p>Track your finances by entering your monthly income and expenses, and get recommendations on how to manage your budget effectively.</p>
+                <p><strong>How to Use:</strong></p>
+                <ul>
+                    <li>Go to the "Finance Tracker" section to enter your monthly income.</li>
+                    <li>Track your spending by categorizing each transaction.</li>
+                    <li>Get monthly summaries and budgeting tips.</li>
+                </ul>
+            </div>
+
+            <!-- Direct Messaging System to University Help Center Section -->
+            <div class="section">
+                <h3>4. Direct Messaging to University Help Center</h3>
+                <p>This feature enables students to contact the university’s help center directly for any queries or concerns.</p>
+                <p><strong>How to Use:</strong></p>
+                <ul>
+                    <li>Click on the "Help Center" tab to access the messaging system.</li>
+                    <li>Select your query type (academic, personal, general).</li>
+                    <li>Type your question and click “Send” for assistance.</li>
+                </ul>
+            </div>
+
+            <!-- Smart Chatbot Section -->
+            <div class="section">
+                <h3>5. Smart Chatbot for Support (NOT CONFIRMED)</h3>
+                <p>A Smart Chatbot can assist with common queries, like course schedules, room locations, and campus information.</p>
+                <p><strong>How it Works:</strong></p>
+                <ul>
+                    <li>Access the chatbot through the "Chat with Support" button.</li>
+                    <li>Ask common questions and get instant responses.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- License Agreement Section -->
+        <div class="section">
+            <h2>License Agreement</h2>
+            <div class="license-agreement">
+                <pre>
+UNI LIFE – End User License Agreement (EULA)
+
+IMPORTANT: READ THIS LICENSE AGREEMENT CAREFULLY BEFORE USING THIS SOFTWARE. BY USING THE UNI LIFE PLATFORM, YOU AGREE TO THE TERMS OUTLINED BELOW.
+
+1. License Grant:
+United We Code grants you a non-exclusive, non-transferable license to access and use UNI LIFE for personal, educational purposes only.
+
+2. Restrictions:
+You may not modify, distribute, or create derivative works of the software without prior written consent from United We Code.
+
+3. Privacy and Data:
+All personal data collected by UNI LIFE is handled in accordance with our Privacy Policy, which can be accessed at any time on the platform.
+
+4. Disclaimer of Warranty:
+UNI LIFE is provided "as is" without warranty of any kind. United We Code does not guarantee uninterrupted service.
+
+5. Termination:
+United We Code reserves the right to terminate this agreement at any time if you violate its terms.
+
+United We Code reserves the right to update this agreement at any time.
+
+By continuing, you agree to the terms outlined above.
+                </pre>
+            </div>
+        </div>
+
+        <!-- Button to agree -->
+        <button id="agree-btn" onclick="showThanks()">Agree & Continue</button>
+        <div id="thank-you-message" class="thank-you-message">Thank you for agreeing!</div>
+    </div>
+
+    <!-- Feedback Form -->
+    <div id="feedback-tab-content" style="display:none; flex-grow: 1;">
+        <div id="feedback-form-container">
+            <h3>Provide Feedback</h3>
+            <form id="feedback-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="feedback">Your Feedback</label>
+                <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+            <div id="feedback-success-message" class="success-message" style="display: none;">
+                Thank you for your feedback!
+            </div>
+            <div id="feedback-error-message" class="error-message" style="display: none;">
+                Sorry, there was an error while submitting your feedback. Please try again later.
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Powered by <strong>United We Code</strong></p>
+    <ul class="social-links">
+        <li><a href="https://facebook.com/unitedwecode" target="_blank">Facebook</a></li>
+        <li><a href="https://twitter.com/unitedwecode" target="_blank">Twitter</a></li>
+        <li><a href="https://linkedin.com/company/unitedwecode" target="_blank">LinkedIn</a></li>
+        <li><a href="https://instagram.com/unitedwecode" target="_blank">Instagram</a></li>
+    </ul>
+</footer>
+
+<script>
+    function showTab(tabName) {
+        if (tabName === 'guide') {
+            document.getElementById('guide-tab-content').style.display = 'block';
+            document.getElementById('feedback-tab-content').style.display = 'none';
+            document.getElementById('guide-tab').classList.add('active-tab');
+            document.getElementById('feedback-tab').classList.remove('active-tab');
+        } else {
+            document.getElementById('guide-tab-content').style.display = 'none';
+            document.getElementById('feedback-tab-content').style.display = 'block';
+            document.getElementById('feedback-tab').classList.add('active-tab');
+            document.getElementById('guide-tab').classList.remove('active-tab');
+        }
+    }
+
+    // Show thanks message after agreeing
+    function showThanks() {
+        document.getElementById('thank-you-message').style.display = 'block';
+        document.getElementById('container').classList.add('agreed');
+    }
+
+    // Handle feedback form submission
+    document.getElementById('feedback-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const feedback = document.getElementById('feedback').value;
+
+        // Simulate success or error
+        if (name && email && feedback) {
+            document.getElementById('feedback-success-message').style.display = 'block';
+            document.getElementById('feedback-error-message').style.display = 'none';
+        } else {
+            document.getElementById('feedback-success-message').style.display = 'none';
+            document.getElementById('feedback-error-message').style.display = 'block';
+        }
+    });
+</script>
+
+</body>
+</html>
