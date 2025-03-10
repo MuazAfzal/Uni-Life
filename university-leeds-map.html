@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Leeds - Campus Buildings</title>
+    <style>
+        /* Reset styles for consistency */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #333;
+            color: #e2e2e2;
+            padding: 40px;
+        }
+
+        h1, h2, p {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #0099cc;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #d3d3d3;
+            margin-bottom: 40px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .search-container input {
+            width: 80%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #555;
+            border-radius: 8px;
+            background-color: #444;
+            color: #fff;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .map-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .building {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .building:hover {
+            background-color: #007BFF;
+        }
+
+        .building a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Image Styling */
+        header img {
+            width: 90%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header style="text-align: center; margin-bottom: 40px;">
+        <img src="leeds.jpg" alt="University of Leeds">
+    </header>
+    <h1>University of Leeds</h1>
+    <h2>Campus Buildings</h2>
+    <p>Click on any building name to view its location on Google Maps.</p>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Search for a building..." onkeyup="filterBuildings()">
+        <button onclick="filterBuildings()">Search</button>
+    </div>
+
+    <!-- Building List -->
+    <div class="map-container" id="buildingList">
+        <div class="building"><a href="https://www.google.com/maps?q=53.8067,-1.5556" target="_blank">Great Hall</a></div>
+        <div class="building"><a href="https://www.google.com/maps?q=53.8074,-1.5530" target="_blank">Brotherton Library</a></div>
+        <div class="building"><a href="https://www.google.com/maps?q=53.8062,-1.5545" target="_blank">Parkinson Building</a></div>
+        <div class="building"><a href="https://www.google.com/maps?q=53.8071,-1.5538" target="_blank">Student Union</a></div>
+        <div class="building"><a href="https://www.google.com/maps?q=53.8068,-1.5517" target="_blank">Engineering Building</a></div>
+        <div class="building"><a href="https://www.google.com/maps?q=53.8055,-1.5532" target="_blank">Roger Stevens Building</a></div>
+        <div class="building"><a href="https://www.google.com/maps?q=53.8058,-1.5512" target="_blank">Michael Sadler Building</a></div>
+        <div class="building"><a href="https://www.google.com/maps?q=53.8053,-1.5521" target="_blank">Edward Boyle Library</a></div>
+        <div class="building"><a href="https://www.google.com/maps?q=53.8048,-1.5533" target="_blank">Faculty of Biological Sciences</a></div>
+        <div class="building"><a href="https://www.google.com/maps?q=53.8045,-1.5547" target="_blank">Maurice Keyworth Building</a></div>
+        <div class="building"><a href="https://www.google.com/maps?q=53.8032,-1.5525" target="_blank">The Edge Sports Centre</a></div>
+        <div class="building"><a href="https://www.google.com/maps?q=53.8039,-1.5551" target="_blank">Clarendon Building</a></div>
+        <div class="building"><a href="https://www.google.com/maps?q=53.8051,-1.5553" target="_blank">School of Music</a></div>
+        <div class="building"><a href="https://www.google.com/maps?q=53.8027,-1.5511" target="_blank">Institute for Transport Studies</a></div>
+
+    </div>
+
+    <!-- Slideshow -->
+    <div id="slideshow" style="text-align: center; margin-top: 40px;">
+        <h2>Upcoming Events</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="leedsevent1.jpg" alt="Event 1" style="width: 30%; border-radius: 10px;">
+            </div>
+            <div class="mySlides fade">
+                <img src="leedsevent2.jpg" alt="Event 2" style="width: 30%; border-radius: 10px;">
+            </div>
+            <div class="mySlides fade">
+                <img src="leedsevent3.jpg" alt="Event 3" style="width: 30%; border-radius: 10px;">
+            </div>
+            <div class="mySlides fade">
+                <img src="leedsevent4.jpg" alt="Event 4" style="width: 30%; border-radius: 10px;">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+    
+        function showSlides() {
+            var slides = document.getElementsByClassName("mySlides");
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000);
+        }
+
+        function filterBuildings() {
+            var input = document.getElementById('searchBar').value.toLowerCase();
+            var buildings = document.getElementsByClassName('building');
+            
+            for (var i = 0; i < buildings.length; i++) {
+                var building = buildings[i];
+                var buildingText = building.innerText.toLowerCase();
+                
+                if (buildingText.includes(input)) {
+                    building.style.display = "";
+                } else {
+                    building.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
