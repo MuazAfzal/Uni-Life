@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Chatbot Directory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Professional fonts for a clean look -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset and global styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    a {
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    /* Header styling with a subtle gradient */
+    header {
+      background: linear-gradient(135deg, #1e1e1e, #252525);
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    /* Main container */
+    .container {
+      flex: 1;
+      max-width: 1200px;
+      width: 90%;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    /* Grid layout for the list */
+    .chatbot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .chatbot-item {
+      background-color: #1e1e1e;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+      transition: transform 0.4s ease, background 0.4s ease;
+    }
+    .chatbot-item:hover {
+      background-color: #2a2a2a;
+      transform: translateY(-5px);
+    }
+    .chatbot-item h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .chatbot-item p {
+      font-size: 0.95rem;
+      color: #b0b0b0;
+      margin-bottom: 15px;
+    }
+    /* Button styles with vibrant color gradient */
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #ffffff;
+      background: linear-gradient(135deg, #ff8a80, #ff5252);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .btn:hover {
+      background: linear-gradient(135deg, #ff5252, #ff8a80);
+      transform: scale(1.03);
+    }
+    /* Footer styling */
+    footer {
+      background-color: #1e1e1e;
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 0.9rem;
+      box-shadow: 0 -2px 4px rgba(0,0,0,0.5);
+    }
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.5s forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Professional Chatbot Directory</h1>
+  </header>
+  <main class="container fade-in">
+    <section class="chatbot-grid">
+      <article class="chatbot-item">
+        <h2>OpenAI ChatGPT</h2>
+        <p>Advanced conversational AI for creative and professional interactions.</p>
+        <a class="btn" href="https://chat.openai.com/" target="_blank">Visit Site</a>
+      </article>
+      <article class="chatbot-item">
+        <h2>Google Bard</h2>
+        <p>Google’s AI-powered chatbot offering innovative search and conversation features.</p>
+        <a class="btn" href="https://bard.google.com/" target="_blank">Visit Site</a>
+      </article>
+      <article class="chatbot-item">
+        <h2>Hugging Face Chat</h2>
+        <p>Community-driven chatbot with a focus on open-source and collaborative AI research.</p>
+        <a class="btn" href="https://huggingface.co/chat/" target="_blank">Visit Site</a>
+      </article>
+      <article class="chatbot-item">
+        <h2>Pandorabots</h2>
+        <p>A platform for creating, deploying, and managing chatbots with AIML.</p>
+        <a class="btn" href="https://www.pandorabots.com/" target="_blank">Visit Site</a>
+      </article>
+      <article class="chatbot-item">
+        <h2>Replika</h2>
+        <p>Personal AI companion designed to engage in meaningful conversations and self-reflection.</p>
+        <a class="btn" href="https://replika.ai/" target="_blank">Visit Site</a>
+      </article>
+      <article class="chatbot-item">
+        <h2>IBM Watson Assistant</h2>
+        <p>Enterprise-grade AI chatbot solutions for scalable business applications.</p>
+        <a class="btn" href="https://www.ibm.com/watson" target="_blank">Visit Site</a>
+      </article>
+      <article class="chatbot-item">
+        <h2>Azure AI Chatbot</h2>
+        <p>Microsoft’s robust cloud-based chatbot services designed for versatile use cases.</p>
+        <a class="btn" href="https://www.microsoft.com/en-us/ai/azure-ai" target="_blank">Visit Site</a>
+      </article>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Professional Chatbot Directory. All Rights Reserved.
+  </footer>
+</body>
+</html>
